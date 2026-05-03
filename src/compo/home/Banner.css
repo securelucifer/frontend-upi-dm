@@ -1,0 +1,167 @@
+/* Swiper Custom Styles */
+.banner-swiper {
+    --swiper-theme-color: #ffffff;
+    --swiper-pagination-color: #ffffff;
+}
+
+.banner-swiper .swiper-pagination {
+    bottom: 16px !important;
+    padding: 0 16px;
+    z-index: 20;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease !important;
+    margin: 0 3px !important;
+}
+
+.banner-swiper .swiper-pagination-bullet-active {
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    transform: scale(1.3) !important;
+}
+
+.banner-swiper .swiper-pagination-bullet:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    transform: scale(1.1) !important;
+}
+
+/* Fade Effect Enhancement */
+.banner-swiper .swiper-slide {
+    transition: opacity 0.8s ease-in-out !important;
+}
+
+.banner-swiper .swiper-slide-active {
+    z-index: 1;
+}
+
+/* Image Optimization */
+.banner-swiper img {
+    transition: transform 0.3s ease;
+}
+
+.banner-swiper:hover img {
+    transform: scale(1.02);
+}
+
+/* Navigation Button Styles */
+.banner-swiper button {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.banner-swiper button:hover {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Progress Bar Animation */
+.banner-swiper .progress-bar {
+    background: linear-gradient(90deg, #3b82f6 0%, rgba(59, 130, 246, 0.8) 100%);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 640px) {
+    .banner-swiper .swiper-pagination {
+        bottom: 12px !important;
+        padding: 0 12px;
+    }
+
+    .banner-swiper .swiper-pagination-bullet {
+        width: 6px !important;
+        height: 6px !important;
+        margin: 0 2px !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .banner-swiper .swiper-pagination {
+        bottom: 10px !important;
+    }
+}
+
+/* Large Desktop Adjustments */
+@media (min-width: 1280px) {
+    .banner-swiper .swiper-pagination {
+        bottom: 24px !important;
+        padding: 0 24px;
+    }
+
+    .banner-swiper .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+        margin: 0 4px !important;
+    }
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Smooth Touch Interactions */
+.banner-swiper {
+    touch-action: pan-y pinch-zoom;
+}
+
+/* High-DPI Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .banner-swiper img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .banner-swiper .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .banner-swiper .swiper-slide {
+        transition: none !important;
+    }
+
+    .banner-swiper img {
+        transition: none !important;
+    }
+
+    .banner-swiper button {
+        transition: none !important;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.banner-swiper button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.banner-swiper .swiper-pagination-bullet:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
