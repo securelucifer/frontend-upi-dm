@@ -449,27 +449,6 @@ export default function ProductDetails() {
         }
     };
 
-    const handleShare = () => {
-        // Track share action as custom event
-        if (typeof window !== 'undefined' && window.fbq && product) {
-            window.fbq('trackCustom', 'Share', {
-                content_ids: [product.id],
-                content_name: product.name,
-                currency: 'INR'
-            });
-            console.log('📊 Meta Pixel: Share tracked for', product.name);
-        }
-
-        if (navigator.share) {
-            navigator.share({
-                title: product.name,
-                text: `Check out this product: ${product.name}`,
-                url: window.location.href,
-            });
-        } else {
-            navigator.clipboard.writeText(window.location.href);
-        }
-    };
 
     const isInCart = (productId) => {
         return cartItems.some(item => item.id === productId);
@@ -1404,4 +1383,5 @@ export default function ProductDetails() {
             </div>
         </div>
     );
+
 }
