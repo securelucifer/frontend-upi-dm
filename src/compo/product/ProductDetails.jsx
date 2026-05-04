@@ -492,7 +492,7 @@ export default function ProductDetails() {
                     <div className="h-4 bg-gray-200 rounded w-20 animate-pulse"></div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-5 lg:gap-8">
                     <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-sm">
                         <div className="bg-gradient-to-br from-gray-200 to-gray-300 h-64 sm:h-80 lg:h-96 xl:h-[28rem] rounded-lg sm:rounded-xl animate-pulse mb-4"></div>
                         <div className="flex space-x-2 sm:space-x-3">
@@ -619,7 +619,7 @@ export default function ProductDetails() {
                 </motion.div>
 
                 {/* Main Grid - Enhanced Responsive Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-5 lg:gap-8 xl:gap-12">
                     {/* Enhanced Image Gallery with Smooth Sticky Functionality - NO ARROWS OR DOTS */}
                     <motion.div
                         ref={imageGalleryRef}
@@ -651,9 +651,7 @@ export default function ProductDetails() {
                                                         <img
                                                             src={image.url}
                                                             alt={image.alt || `${product.name} ${idx + 1}`}
-                                                            className={`w-full object-contain p-4 sm:p-6 transition-all duration-300 ${isImageSticky
-                                                                ? 'h-48 sm:h-64 lg:h-80'
-                                                                : 'h-64 sm:h-80 lg:h-96 xl:h-[28rem]'
+                                                            className={`w-full h-full object-contain transition-all duration-300 ${isImageSticky ? 'h-48 sm:h-64 lg:h-80' : 'h-64 sm:h-80 lg:h-96 xl:h-[28rem]'
                                                                 }`}
                                                             onError={(e) => {
                                                                 e.target.src = 'https://via.placeholder.com/600x600?text=No+Image';
@@ -760,15 +758,15 @@ export default function ProductDetails() {
                         ref={productInfoRef}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="space-y-4 sm:space-y-6"
+                        className="space-y-4 sm:space-y-5"
                     >
                         {/* Main Product Info Card */}
-                        <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm relative">
+                        <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 shadow-sm relative">
                             {/* Wishlist Button */}
 
 
                             {/* Product Title */}
-                            <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-600 mb-3 sm:mb-4 pr-16 sm:pr-20 leading-tight">
+                            <h1 className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-600 mb-2 sm:mb-3 leading-tight">
                                 {product.name} : {product.weight}
                             </h1>
 
@@ -798,7 +796,7 @@ export default function ProductDetails() {
                             </div>
 
                             {/* Enhanced Price Block */}
-                            <div className="rounded-xl border-2 border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 mb-4 sm:mb-6">
+                            <div className="rounded-xl border-2 border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 p-3 sm:p-5 mb-3 sm:mb-5">
                                 <div className="flex items-center justify-between flex-wrap gap-4">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 sm:gap-3 mb-2">
@@ -809,7 +807,7 @@ export default function ProductDetails() {
                                                 -{discountPercent}%
                                             </div>
                                         </div>
-                                        <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">
+                                        <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-1">
                                             ₹{product.dmartPrice}
                                         </div>
                                         <div className="text-green-700 font-semibold text-sm sm:text-base lg:text-lg flex items-center">
@@ -837,7 +835,7 @@ export default function ProductDetails() {
                             </div>
 
                             {/* Enhanced Cart Controls */}
-                            <div className="space-y-4 sm:space-y-6">
+                            <div className="space-y-4 sm:space-y-5">
                                 {inCart ? (
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.9 }}
