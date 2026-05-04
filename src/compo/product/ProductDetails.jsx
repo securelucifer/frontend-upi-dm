@@ -668,14 +668,7 @@ export default function ProductDetails() {
                                         </Swiper>
 
                                         {/* Share Button */}
-                                        <motion.button
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            onClick={handleShare}
-                                            className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:bg-white transition-all duration-300 z-10"
-                                        >
-                                            <Share className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
-                                        </motion.button>
+                                    
                                     </div>
 
                                     {/* Enhanced Responsive Thumbnails with Smooth Transitions */}
